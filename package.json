@@ -46,7 +46,8 @@
     "prepublishOnly": "yarn test",
     "compile-hardhat": "npx hardhat compile",
     "deploy:hardhat": "npx hardhat run --network hardhat scripts/deploy-factory.js",
-    "deploy:testnet": "npx hardhat run --network testnet scripts/deploy-factory.js"
+    "deploy:testnet": "npx hardhat run --network testnet scripts/deploy-factory.js",
+    "deploy:mainnet": "npx hardhat run --network mainnet scripts/deploy-factory.js"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
