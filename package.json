@@ -18,11 +18,15 @@
     "node": ">=10"
   },
   "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-truffle5": "^2.0.0",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "ethereum-waffle": "^2.4.1",
     "ethereumjs-util": "^6.2.0",
+    "hardhat": "^2.2.0",
     "mocha": "^6.2.2",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
@@ -39,12 +43,15 @@
     "compile": "waffle .waffle.json",
     "pretest": "yarn compile",
     "test": "mocha",
-    "prepublishOnly": "yarn test"
+    "prepublishOnly": "yarn test",
+    "compile-hardhat": "npx hardhat compile",
+    "deploy:hardhat": "npx hardhat run --network hardhat scripts/deploy-factory.js",
+    "deploy:testnet": "npx hardhat run --network testnet scripts/deploy-factory.js"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "truffle-hdwallet-provider": "^1.0.17",
     "truffle": "^5.1.41",
-    "truffle-flattener": "^1.4.4"
+    "truffle-flattener": "^1.4.4",
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }
